@@ -1,21 +1,3 @@
-players/*
-worlds/*
-plugin_data/*
-plugins/*
-bin*/*
-timings/*
-crashdumps/*
-*.log
-*.txt
-*.phar
-server.properties
-/pocketmine.yml
-/plugins.yml
-memory_dumps/*
-resource_packs/
-server.lock
-/phpstan.neon
-
 # Common IDEs
 .idea/
 nbproject/*
