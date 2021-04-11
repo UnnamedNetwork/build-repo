@@ -22,4 +22,4 @@ jobs:
           prerelease: true
           title: "Released from UNWDS CI"
           files: |
-            branch/stable/latest/UNWDS.phar
+            /branch/stable/latest/UNWDS.phar
