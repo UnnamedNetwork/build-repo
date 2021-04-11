@@ -13,7 +13,6 @@ jobs:
     steps:
       - name: "Check status"
         run: |
-          echo "OK. Release now!"
           ls
 
       - uses: "marvinpinto/action-automatic-releases@latest"
