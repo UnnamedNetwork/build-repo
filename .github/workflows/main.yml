@@ -18,4 +18,4 @@ jobs:
           prerelease: true
           title: "Released from UNWDS CI"
           files: |
-            ${{ github.workspace }}/UNWDS.phar
+            ${{ github.workspace }}/branch/stable/latest/UNWDS.phar
