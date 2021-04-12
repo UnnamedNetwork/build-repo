@@ -11,13 +11,17 @@ jobs:
     runs-on: "ubuntu-latest"
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Upload artifact
-    - uses: "marvinpinto/action-automatic-releases@latest"
-      with:
+      - uses: actions/checkout@v2
+      - name: "Check status"
+        run: |
+          ls
+          echo "OK. Release now!"
+
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
           repo_token: "${{ secrets.GHTOKEN }}"
           automatic_release_tag: "latest"
           prerelease: true
           title: "Released from UNWDS CI"
           files: |
-            ${{ github.workspace }}/branch/stable/latest/UNWDS.phar
+            UNWDS.phar
