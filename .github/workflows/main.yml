@@ -15,7 +15,7 @@ jobs:
       - name: "Check status"
         run: |
           mv branch/master/latest/UNWDS.phar branch/master/latest/UNWDS_latest-master.phar
-          mv branch/stable/latest/UNWDS.phar branch/master/stable/UNWDS_latest-stable.phar
+          mv branch/stable/latest/UNWDS.phar branch/stable/latest/UNWDS_latest-stable.phar
           echo "OK. Release now!"
 
       - uses: "marvinpinto/action-automatic-releases@latest"
