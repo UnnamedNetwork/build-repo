@@ -11,10 +11,6 @@ jobs:
     runs-on: "ubuntu-latest"
 
     steps:
-      - name: "Check status"
-        run: |
-          ls
-
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GHTOKEN }}"
@@ -22,4 +18,4 @@ jobs:
           prerelease: true
           title: "Released from UNWDS CI"
           files: |
-            UNWDS.phar
+            ${{ github.workspace }}/UNWDS.phar
