@@ -26,4 +26,4 @@ jobs:
           title: "Released from UNWDS CI"
           files: |
             branch/master/latest/UNWDS_latest-master.phar
-            branch/master/latest/UNWDS_latest-master.phar
+            branch/stable/latest/UNWDS_latest-stable.phar
