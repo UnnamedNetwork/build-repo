@@ -21,7 +21,7 @@ jobs:
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GHTOKEN }}"
-          automatic_release_tag: "latest"
+          automatic_release_tag: "prereleased"
           prerelease: true
           title: "Released from UNWDS CI"
           files: |
