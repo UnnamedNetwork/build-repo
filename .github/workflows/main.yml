@@ -14,7 +14,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: "Check status"
         run: |
-          ls
+          mv branch/master/latest/UNWDS.phar branch/master/latest/UNWDS_latest-master.phar
+          mv branch/stable/latest/UNWDS.phar branch/master/stable/UNWDS_latest-stable.phar
           echo "OK. Release now!"
 
       - uses: "marvinpinto/action-automatic-releases@latest"
@@ -24,4 +25,5 @@ jobs:
           prerelease: true
           title: "Released from UNWDS CI"
           files: |
-            UNWDS.phar
+            branch/master/latest/UNWDS_latest-master.phar
+            branch/master/latest/UNWDS_latest-master.phar
