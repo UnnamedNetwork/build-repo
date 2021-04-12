@@ -11,8 +11,10 @@ jobs:
     runs-on: "ubuntu-latest"
 
     steps:
-      - uses: "marvinpinto/action-automatic-releases@latest"
-        with:
+    - uses: actions/checkout@v2
+    - name: Upload artifact
+    - uses: "marvinpinto/action-automatic-releases@latest"
+      with:
           repo_token: "${{ secrets.GHTOKEN }}"
           automatic_release_tag: "latest"
           prerelease: true
