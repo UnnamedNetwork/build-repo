@@ -2,7 +2,8 @@ name: "Make release"
 
 on:
   push:
-    branch: master
+    branches:
+      - "master"
 
 jobs:
   pre-release:
