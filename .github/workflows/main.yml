@@ -6,7 +6,7 @@ on:
       - "master"
 
 jobs:
-  pre-release:
+  push-stable:
     name: "Make stable build release"
     runs-on: "ubuntu-latest"
 
@@ -25,8 +25,32 @@ jobs:
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GHTOKEN }}"
-          automatic_release_tag: "stable-build"
-          prerelease: true
-          title: "UNWDS Live Build"
+          automatic_release_tag: "stable-latest"
+          prerelease: false
+          title: "UNWDS (stable) latest build"
           files: |
             branch/stable/latest/UNWDS.phar
+  push-master:
+    name: "Make master build release"
+    runs-on: "ubuntu-latest"
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: "Get ready"
+        run: |
+          if [ -f "branch/master/latest/UNWDS.phar" ]; then
+            echo File exist!
+            echo "OK. Release now!"
+          else
+            echo Server software not found.
+            exit 1
+          fi
+
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GHTOKEN }}"
+          automatic_release_tag: "master-latest"
+          prerelease: true
+          title: "UNWDS (master) latest build"
+          files: |
+            branch/master/latest/UNWDS.phar
