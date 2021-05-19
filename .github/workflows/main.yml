@@ -56,6 +56,6 @@ jobs:
           files: |
             UNWDS/branch/stable/latest/UNWDS-stable.phar
             UNWDS/branch/master/latest/UNWDS-master.phar
-	          UNWDS-alt/branch/stable/latest/UNWDS-alt-stable.phar
+            UNWDS-alt/branch/stable/latest/UNWDS-alt-stable.phar
             UNWDS-alt/branch/master/latest/UNWDS-alt-master.phar
 		
