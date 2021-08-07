@@ -28,24 +28,24 @@ jobs:
             echo Server software not found.
             exit 1
           fi
-          if [ -f "UNWDS-alt/branch/master/latest/UNWDS.phar" ]; then
+          if [ -f "UNWDS-alt/branch/master/latest/*/UNWDS.phar" ]; then
             echo File exist!
             echo "OK. Release now!"
           else
             echo Server software not found.
             exit 1
           fi
-          if [ -f "UNWDS-alt/branch/master/latest/UNWDS.phar" ]; then
+          if [ -f "UNWDS-alt/branch/master/latest/*/UNWDS.phar" ]; then
             echo File exist!
             echo "OK. Release now!"
           else
             echo Server software not found.
             exit 1
           fi
-          mv UNWDS/branch/stable/latest/UNWDS.phar UNWDS/branch/stable/latest/UNWDS-stable.phar
-          mv UNWDS/branch/master/latest/UNWDS.phar UNWDS/branch/master/latest/UNWDS-master.phar
-          mv UNWDS-alt/branch/stable/latest/UNWDS.phar UNWDS-alt/branch/stable/latest/UNWDS-alt-stable.phar
-          mv UNWDS-alt/branch/master/latest/UNWDS.phar UNWDS-alt/branch/master/latest/UNWDS-alt-master.phar
+          mv UNWDS/branch/stable/latest/*/UNWDS.phar UNWDS/branch/stable/latest/*/UNWDS-stable.phar
+          mv UNWDS/branch/master/latest/*/UNWDS.phar UNWDS/branch/master/latest/*/UNWDS-master.phar
+          mv UNWDS-alt/branch/stable/latest/*/UNWDS.phar UNWDS-alt/branch/stable/latest/*/UNWDS-alt-stable.phar
+          mv UNWDS-alt/branch/master/latest/*/UNWDS.phar UNWDS-alt/branch/master/latest/*/UNWDS-alt-master.phar
           
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
@@ -54,7 +54,7 @@ jobs:
           prerelease: false
           title: "UNWDS builds"
           files: |
-            UNWDS/branch/stable/latest/UNWDS-stable.phar
-            UNWDS/branch/master/latest/UNWDS-master.phar
-            UNWDS-alt/branch/stable/latest/UNWDS-alt-stable.phar
-            UNWDS-alt/branch/master/latest/UNWDS-alt-master.phar
+            UNWDS/branch/stable/latest/*/UNWDS-stable.phar
+            UNWDS/branch/master/latest/*/UNWDS-master.phar
+            UNWDS-alt/branch/stable/latest/*/UNWDS-alt-stable.phar
+            UNWDS-alt/branch/master/latest/*/UNWDS-alt-master.phar
